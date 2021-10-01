@@ -1,41 +1,107 @@
 .App {
   text-align: center;
+  width: 1000px;
+  margin: auto;
+  margin-top: 200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.floatLeft{
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.floatRight{
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul{
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  height: 48px;
+  line-height: 48px;
+  width: 96px;
+  text-align: left;
+  list-style: none;
+  margin:0 0 0 10px;
+  background-clip: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+ul li a{
+  display: block;
+  padding-left: 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li:first-of-type a{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+ul li:last-of-type a{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.active{
+  background-color: #008c8c;
+  color: #fff;
+}
+
+.overFlowHidden{
+  overflow: hidden;
+}
+
+.textAlignLeft{
+  text-align: left;
+}
+
+.padding40{
+  padding: 40px;
+}
+
+.contentBox{
+  min-height: 500px;
+  border: 1px solid #008c8c;
+}
+.width100{
+  width: 100%;
 }
 .close{
   display: none;
+}
+
+/* 
+list 样式
+*/
+input[type="text"]{
+  padding: 4px 6px;
+  border: 1px solid #d2cbcb;
+  border-radius: 4px;
+  min-width: 300px;
+  height: 32px;
+  line-height: 32px;
+  margin: 4px 10px;
+}
+input:focus-visible {
+  outline: #1890ff auto 1px;
+}
+input[type="checkbox"]{
+  height: 16px;
+  width: 16px;
+}
+.listLi{
+  background-color: #b8b5b5;
+  border-bottom: 1px solid #fff;
+}
+.listLi button{
+  padding: 4px 8px;
+  margin-right: 5px;
+  color: rgba(0, 0, 0, 0.45);
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
 }
