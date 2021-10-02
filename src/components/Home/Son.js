@@ -5,12 +5,14 @@ class Son extends Component{
     super();
   }
   render(){
-    let {name,type,age} = this.props
+    let {name,type,age,ref11} = this.props
+    console.log(this.props);
     return (
       <div>
         <p>name:{name}</p>
         <p>type:{type}</p>
         <p>age:{age}</p>
+        <input ref={ref11} />
       </div>
     )
   }

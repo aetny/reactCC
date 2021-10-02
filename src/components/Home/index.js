@@ -5,6 +5,7 @@ class Home extends Component{
   constructor(){
     super();
     this.objRef = React.createRef();//{current:null}
+    this.objRef1 = React.createRef();
   }
   componentDidMount(){
     this.timer = setTimeout(() => {
@@ -12,6 +13,8 @@ class Home extends Component{
       this.refs.strRef.textContent = 'String ref';//以前的方式
       this.objRef.current.textContent = 'Object ref';
     }, 2000);
+    
+    this.objRef1.current.value = '11'
   }
   componentWillUnmount(){
     clearTimeout(this.timer);
@@ -28,7 +31,7 @@ class Home extends Component{
         <p ref="strRef">span1</p>
         <p ref={this.objRef}>span1</p>
 
-        子组件： <Son {...obj}/>
+        子组件： <Son {...obj} ref11={this.objRef1}/>
       </div>
     )
   }
