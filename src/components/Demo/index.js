@@ -13,8 +13,10 @@ class Demo extends Component{
     isAll:false
   }
   handlePush=(value)=>{
+    this.state.arr.push({value,isDone:false})
     this.setState({
-      arr:[{value,isDone:false},...this.state.arr],
+      arr: this.state.arr,//这种写法贼强！！！会造成react的钩子函数bug（componentWillReceiveProps）
+      // arr:[{value,isDone:false},...this.state.arr],
       isAll:false
     })
   }
@@ -56,15 +58,18 @@ class Demo extends Component{
       handleChange:this.handleChange,
       handleDelete:this.handleDelete
     }
+    //这个地方我重新定义了数据，避免了数据的重复
     let sub = {
       arr,
       isAll,
       handleIsAll:this.handleIsAll
     }
+    // console.log(arr);//理解一下 这里数据简单 只有一层 浅拷贝即可 复杂类型需要深拷贝！
+    // console.log([...arr]);
     return (
       <div>
         <Todoheader handlePush={this.handlePush}/>
-        <TodoMain aggregate = {aggregate} />
+        <TodoMain aggregate = {aggregate} arr={[...arr]}/>
         <TodoFooter sub={sub} />
       </div>
     )

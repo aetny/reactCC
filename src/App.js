@@ -7,6 +7,7 @@ import Context from './components/Context/index';
 import Forward from './components/Forward/index';
 import Other from './components/Other';
 import Info from './components/Info';
+import Render from './components/Render/index';
 import Demo from './components/Demo/index';
 class App extends Component{
   constructor(){
@@ -22,6 +23,7 @@ class App extends Component{
             <li><NavLink to="/context">Context</NavLink></li>
             <li><NavLink to="/other">Other</NavLink></li>
             <li><NavLink to="/info">详情</NavLink></li>
+            <li><NavLink to="/render">Render</NavLink></li>
             <li><NavLink to="/demo">Demo</NavLink></li>
           </ul>
         </div>
@@ -33,6 +35,7 @@ class App extends Component{
             <Route path="/context" component={Context}></Route>
             <Route path="/other" component={Other}></Route>
             <Route path="/info" component={Info}></Route>
+            <Route path="/render" component={Render}></Route>
             <Route path="/demo" component={Demo}></Route>
             <Redirect to="/home"></Redirect>
           </Switch>
