@@ -7,6 +7,7 @@ import Context from './components/Context/index';
 import Forward from './components/Forward/index';
 import Other from './components/Other';
 import Info from './components/Info';
+import Hooks from './components/Hooks';
 import Render from './components/Render/index';
 import Demo from './components/Demo/index';
 class App extends Component{
@@ -23,7 +24,8 @@ class App extends Component{
             <li><NavLink to="/context">Context</NavLink></li>
             <li><NavLink to="/other">Other</NavLink></li>
             <li><NavLink to="/info">详情</NavLink></li>
-            <li><NavLink to="/render">Render</NavLink></li>
+            <li><NavLink to="/render">钩子函数</NavLink></li>
+            <li><NavLink to="/hooks">hooks</NavLink></li>
             <li><NavLink to="/demo">Demo</NavLink></li>
           </ul>
         </div>
@@ -36,6 +38,7 @@ class App extends Component{
             <Route path="/other" component={Other}></Route>
             <Route path="/info" component={Info}></Route>
             <Route path="/render" component={Render}></Route>
+            <Route path="/hooks" component={Hooks}></Route>
             <Route path="/demo" component={Demo}></Route>
             <Redirect to="/home"></Redirect>
           </Switch>
