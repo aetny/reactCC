@@ -14,6 +14,11 @@ class Render extends Component{
       msg:'更新'
     })
   }
+  handleUnMount(){
+    ReactDOM.unmountComponentAtNode(document.getElementById('root'));
+  }
+  
+  // 下面基本是狗子函数
   componentWillMount(){//将要插入虚拟dom，组件将要挂载
     console.log('render之前',this.state.msg);
     //不会被废除 服务端渲染贼强！！！
@@ -34,6 +39,7 @@ class Render extends Component{
     //这里最合适调用ajax，不阻碍html的渲染
   }
 
+  //这俩简直是哥哥！！
   componentWillReceiveProps(nextProps){
     //有一个重大bug！！！原因是react的地址引用问题！！！不是根据数据内容判断的 而是根据数据的引用来判断的 所以react项目里深拷贝贼多！
     //初始化的时候不会立即执行！在接收到新的props值触发 
@@ -58,11 +64,9 @@ class Render extends Component{
   componentDidUpdate(){//插入虚拟dom
     console.log('更新后',this.state.msg);
   }
-  handleUnMount(){
-    ReactDOM.unmountComponentAtNode(document.getElementById('root'))
-  }
   componentWillUnmount(){
     console.log('即将卸载');
+    //这里一般会 清除定时器！！！ 收尾
   }
 }
 export default Render;
