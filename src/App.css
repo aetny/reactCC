@@ -20,13 +20,17 @@ ul{
 ul li{
   height: 48px;
   line-height: 48px;
-  width: 96px;
+  min-width: 96px;
   text-align: left;
   list-style: none;
   margin:0 0 0 10px;
   background-clip: border-box;
 }
-
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 ul li a{
   display: block;
   padding-left: 20%;
@@ -46,6 +50,19 @@ a{
   text-decoration: none;
 }
 
+button{
+  height: 32px;
+  background-color: #1890ff;
+  padding: 4px 15px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #1890ff;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px #0000000b;
+  border-radius: 4px;
+  margin-right: 2px;
+  cursor: pointer;
+}
 .active{
   background-color: #008c8c;
   color: #fff;

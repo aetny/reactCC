@@ -2,7 +2,7 @@ import {Component} from 'react';
 import {Router,Route,NavLink,IndexRoute,Redirect,Switch } from 'react-router-dom';
 
 import New from './New';
-import Message from './Message';
+import Message from './Message/Message';
 import './common.css'
 class Other extends Component{
   constructor(){

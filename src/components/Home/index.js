@@ -14,7 +14,7 @@ class Home extends Component{
       this.objRef.current.textContent = 'Object ref';
     }, 2000);
     
-    this.objRef1.current.value = '11'
+    this.objRef1.current.value = '11';
   }
   componentWillUnmount(){
     clearTimeout(this.timer);

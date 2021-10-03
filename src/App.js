@@ -22,11 +22,11 @@ class App extends Component{
             <li><NavLink to="/home">首页</NavLink></li>
             <li><NavLink to="/forward">Forword</NavLink></li>
             <li><NavLink to="/context">Context</NavLink></li>
-            <li><NavLink to="/other">Other</NavLink></li>
-            <li><NavLink to="/info">详情</NavLink></li>
+            <li><NavLink to="/other">路由配置</NavLink></li>
+            <li><NavLink to="/info">模板页面</NavLink></li>
             <li><NavLink to="/render">钩子函数</NavLink></li>
             <li><NavLink to="/hooks">hooks</NavLink></li>
-            <li><NavLink to="/demo">Demo</NavLink></li>
+            <li><NavLink to="/demo">组件传值</NavLink></li>
           </ul>
         </div>
         <div className="contentBox overFlowHidden textAlignLeft padding40">
