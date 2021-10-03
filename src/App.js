@@ -9,6 +9,7 @@ import Other from './components/Other';
 import Info from './components/Info';
 import Hooks from './components/Hooks';
 import Render from './components/Render/index';
+import SetState from './components/SetState/index';
 import Demo from './components/Demo/index';
 class App extends Component{
   constructor(){
@@ -27,6 +28,7 @@ class App extends Component{
             <li><NavLink to="/render">钩子函数</NavLink></li>
             <li><NavLink to="/hooks">hooks</NavLink></li>
             <li><NavLink to="/demo">组件传值</NavLink></li>
+            <li><NavLink to="/setState">setState</NavLink></li>
           </ul>
         </div>
         <div className="contentBox overFlowHidden textAlignLeft padding40">
@@ -39,6 +41,7 @@ class App extends Component{
             <Route path="/info" component={Info}></Route>
             <Route path="/render" component={Render}></Route>
             <Route path="/hooks" component={Hooks}></Route>
+            <Route path="/setState" component={SetState}></Route>
             <Route path="/demo" component={Demo}></Route>
             <Redirect to="/home"></Redirect>
           </Switch>
