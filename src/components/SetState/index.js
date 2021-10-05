@@ -30,13 +30,21 @@ class SetState extends Component{
     console.log(this.state.val);
     this.setState({val:this.state.val+1});
     console.log(this.state.val);
+    // this.setState({val:this.state.val+1});
+    // console.log(this.state.val);
+    // (function(_){
+    //   _.setState({val:_.state.val+1});
+    //   console.log(_.state.val);
+    // }(this))
     setTimeout(()=>{
+      console.log(this.state.val);
       this.setState({val:this.state.val+1});
       console.log(this.state.val);
       this.setState({val:this.state.val+1});
       console.log(this.state.val);
     },0)
   }
+  //shouldComponentUpdate componentWillUpdate不能使用setState
   render(){
     let {count} = this.state
     return (

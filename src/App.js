@@ -11,11 +11,14 @@ import Hooks from './components/Hooks';
 import Render from './components/Render/index';
 import SetState from './components/SetState/index';
 import Demo from './components/Demo/index';
+import MoBX from './components/MoBX/index';
+import Redux from './container/index';
 class App extends Component{
   constructor(){
     super();
   }
   render(){
+    console.log(this.props);
     return (
       <div className="App">
         <div className="floatLeft">
@@ -29,6 +32,8 @@ class App extends Component{
             <li><NavLink to="/hooks">hooks</NavLink></li>
             <li><NavLink to="/demo">组件传值</NavLink></li>
             <li><NavLink to="/setState">setState</NavLink></li>
+            <li><NavLink to="/mobx">MoBX</NavLink></li>
+            <li><NavLink to="/redux">Redux</NavLink></li>
           </ul>
         </div>
         <div className="contentBox overFlowHidden textAlignLeft padding40">
@@ -42,6 +47,8 @@ class App extends Component{
             <Route path="/render" component={Render}></Route>
             <Route path="/hooks" component={Hooks}></Route>
             <Route path="/setState" component={SetState}></Route>
+            <Route path="/mobx" component={MoBX}></Route>
+            <Route path="/redux" component={Redux}></Route>
             <Route path="/demo" component={Demo}></Route>
             <Redirect to="/home"></Redirect>
           </Switch>
